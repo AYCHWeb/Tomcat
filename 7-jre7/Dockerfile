@@ -1,4 +1,5 @@
-FROM java:7-jre
+# openweb/oracle-tomcat:7-jre7
+FROM isuper/java-oracle:jre_7
 
 ENV CATALINA_HOME /usr/local/tomcat
 ENV PATH $CATALINA_HOME/bin:$PATH
