@@ -13,9 +13,11 @@ install:
   - git clone https://github.com/docker-library/official-images.git ~/official-images
 
 before_script:
+  - docker pull isuper/java-oracle:jre_7
+  - docker pull isuper/java-oracle:jre_8
   - env | sort
   - cd "$VERSION"
-  - image="tomcat:$VERSION"
+  - image="openweb/oracle-tomcat:$VERSION"
 
 script:
   - docker build -t "$image" .
