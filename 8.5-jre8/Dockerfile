@@ -1,6 +1,8 @@
 # openweb/oracle-tomcat:8.5-jre8
 FROM isuper/java-oracle:jre_8
 
+# This is a hack to fix a rogue JRE_HOME variable set in the isuper/java-oracle
+ENV JRE_HOME ""
 ENV CATALINA_HOME /usr/local/tomcat
 ENV PATH $CATALINA_HOME/bin:$PATH
 RUN mkdir -p "$CATALINA_HOME"
