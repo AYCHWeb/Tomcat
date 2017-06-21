@@ -1,5 +1,5 @@
 # openweb/oracle-tomcat:6-jre8
-FROM isuper/java-oracle:jre_8
+FROM sgrio/java-oracle:jre_8
 
 # This is a hack to fix a rogue JRE_HOME variable set in the isuper/java-oracle
 ENV JRE_HOME ""
